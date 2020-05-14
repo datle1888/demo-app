@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <data>
+
+    <import type="android.view.View" />
+
+    <import type="com.jst.poc.dispatcher.models.Top_selection" />
+
+    <variable
+      name="dat"
+      type="com.jst.poc.dispatcher.models.BeanSelectedPage" />
+  </data>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/top_menu_background">
+
+    <!--        <View-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="150dp"-->
+    <!--            android:background="@color/dim_white"/>-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="100dp"
+      android:layout_marginTop="5dp"
+      android:paddingTop="3dp">
+
+      <!--Dash-->
+      <LinearLayout
+        android:id="@+id/lin_ai_station"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/tvAIStation"
+          style="@style/top_selection_text_unselected"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/top_menu_status"
+          app:fontFamily="@font/rajdhani_bold" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/hgAiStation"
+          style="@style/top_selection_highlighter"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/highlighter_height" />
+
+      </LinearLayout>
+
+      <!--Dash-->
+      <LinearLayout
+        android:id="@+id/lin_dash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@id/img_dp_logo"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/tvDash"
+          style="@style/top_selection_text_unselected"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/top_menu_dashboard"
+          app:fontFamily="@font/rajdhani_bold" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/hg_dash"
+          style="@style/top_selection_highlighter"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/highlighter_height" />
+
+      </LinearLayout>
+
+      <!--Jobs-->
+      <LinearLayout
+        android:id="@+id/lin_jobs"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@id/lin_dash"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/tvJobs"
+          style="@style/top_selection_text_unselected"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/top_menu_missions" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/hg_jobs"
+          style="@style/top_selection_highlighter"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/highlighter_height" />
+
+      </LinearLayout>
+
+
+      <!--Cameras-->
+      <LinearLayout
+        android:id="@+id/lin_cameras"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="15dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/lin_vehicle"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/tvCameras"
+          style="@style/top_selection_text_unselected"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/top_menu_alerts" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/hg_cameras"
+          style="@style/top_selection_highlighter"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/highlighter_height" />
+
+      </LinearLayout>
+
+      <!--ic_vehicle-->
+      <LinearLayout
+        android:id="@+id/lin_vehicle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@+id/img_dp_logo"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/tvVehicles"
+          style="@style/top_selection_text_unselected"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/top_menu_vehicle" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/hg_vehicle"
+          style="@style/top_selection_highlighter"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/highlighter_height" />
+
+      </LinearLayout>
+
+      <!--ic_vehicle-->
+      <LinearLayout
+        android:id="@+id/lin_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/tvLogout"
+          style="@style/top_selection_text_unselected"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/top_menu_logout" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/hg_logout"
+          style="@style/top_selection_highlighter"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/highlighter_height" />
+
+      </LinearLayout>
+
+      <!--Logo-->
+      <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_dp_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/top_menu_logo" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </LinearLayout>
+
+
+</layout>

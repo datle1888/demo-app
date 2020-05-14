@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constr"
+    android:layout_width="150dp"
+    android:layout_height="140dp"
+    android:background="@drawable/dp_circle2">
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvLabel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="30dp"
+      android:ems="4"
+      android:gravity="center"
+      android:text="@string/lbl_facial_detection"
+      android:textAlignment="center"
+      android:textColor="@color/white"
+      android:textSize="@dimen/tz_large"
+      app:fontFamily="@font/rajdhani_semibold"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvVal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="30dp"
+      android:gravity="center"
+      android:text="32"
+      android:textColor="@color/white"
+      android:textSize="@dimen/tz_medium"
+      app:fontFamily="@font/rajdhani_bold"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tvLabel" />
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

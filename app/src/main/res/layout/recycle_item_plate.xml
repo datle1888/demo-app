@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <data>
+
+    <variable
+      name="dat"
+      type="com.jst.poc.dispatcher.models.BeanSocketObjNum" />
+  </data>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/common_google_signin_btn_text_light_default"
+    android:padding="@dimen/padding_medium"
+    android:paddingStart="@dimen/padding_small">
+
+    <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/img_bottom_bound"
+      android:layout_width="500dp"
+      android:layout_height="wrap_content"
+      android:scaleType="fitStart"
+      app:layout_constraintBottom_toBottomOf="@id/lin_image"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/lin_image" />
+
+    <!-- Lin camera image -->
+    <LinearLayout
+      android:id="@+id/lin_image"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/padding_double_xtra_large"
+      android:orientation="vertical"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+      <androidx.appcompat.widget.AppCompatTextView
+        style="@style/hint_plate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_hint_camera_image" />
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/cameraImg"
+        android:layout_width="@dimen/img_plate_width"
+        android:layout_height="@dimen/img_plate_height"
+        android:layout_marginTop="4dp"
+        android:scaleType="fitXY" />
+
+
+    </LinearLayout>
+
+    <!-- Lin Vehicle Number -->
+    <LinearLayout
+      android:id="@+id/lin_vehicle_number"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintEnd_toStartOf="@id/lin_detected_by"
+      app:layout_constraintStart_toEndOf="@id/lin_image"
+      app:layout_constraintTop_toTopOf="@id/lin_image">
+
+      <androidx.appcompat.widget.AppCompatTextView
+        style="@style/hint_plate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_hint_vehicle_number" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        style="@style/title_plate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{dat.plateNumber}"
+        android:textAllCaps="true" />
+
+    </LinearLayout>
+
+    <!-- Lin Detected By -->
+    <LinearLayout
+      android:id="@+id/lin_detected_by"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintEnd_toStartOf="@id/lin_date"
+      app:layout_constraintStart_toEndOf="@id/lin_vehicle_number"
+      app:layout_constraintTop_toTopOf="@id/lin_vehicle_number">
+
+      <androidx.appcompat.widget.AppCompatTextView
+        style="@style/hint_plate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_hint_detected_by" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        style="@style/title_plate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{dat.detectedBy}" />
+
+    </LinearLayout>
+
+    <!-- Lin Date -->
+    <LinearLayout
+      android:id="@+id/lin_date"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintEnd_toStartOf="@id/btnDismiss"
+      app:layout_constraintStart_toEndOf="@id/lin_detected_by"
+      app:layout_constraintTop_toTopOf="@id/lin_detected_by">
+
+      <androidx.appcompat.widget.AppCompatTextView
+        style="@style/hint_plate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_hint_date" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        style="@style/title_plate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{dat.timeAgo}" />
+
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btnDismiss"
+      style="@style/btn_style_dismiss"
+      android:layout_width="@dimen/medium_button_width"
+      android:layout_height="@dimen/medium_button_height"
+      android:background="@drawable/btn_dismiss_bg"
+      android:text="@string/btn_dismiss"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="@id/lin_image"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

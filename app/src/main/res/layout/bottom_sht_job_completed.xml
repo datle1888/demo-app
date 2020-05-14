@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_black"
+    android:minHeight="@dimen/bottom_sheet_min_height"
+    android:paddingTop="@dimen/padding_semi"
+    android:paddingBottom="@dimen/padding_medium">
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvTitle"
+      style="@style/large_title"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/padding_semi"
+      android:text="@string/lbl_job_completed"
+      android:textAllCaps="true"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvCancel"
+      style="@style/caption"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/padding_medium"
+      android:drawablePadding="@dimen/padding_small"
+      android:gravity="center_vertical"
+      android:text="@string/lbl_cancel"
+      android:textColor="@color/white"
+      app:drawableTint="@color/white"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/imgBound"
+      android:layout_width="0dp"
+      android:layout_height="30dp"
+      android:scaleType="fitXY"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+
+    <LinearLayout
+      android:id="@+id/lin"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/padding_double_xtra_large"
+      android:layout_marginTop="@dimen/padding_medium_large"
+      android:layout_marginEnd="@dimen/padding_double_xtra_large"
+      android:orientation="vertical"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/imgBound">
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSelectType"
+        style="@style/hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_google_signin_btn_text_light_disabled"
+        android:padding="10dp"
+        android:text="@string/lbl_select_type" />
+
+      <FrameLayout
+        android:id="@+id/frmSelectType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/common_google_signin_btn_text_light_disabled"
+        android:padding="@dimen/padding_small">
+
+        <androidx.appcompat.widget.AppCompatSpinner
+          android:id="@+id/spinnerType"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="2dp"
+          android:backgroundTint="@color/text_unselected_green" />
+
+      </FrameLayout>
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNotes"
+        style="@style/hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_semi"
+        android:background="@color/common_google_signin_btn_text_light_disabled"
+        android:padding="10dp"
+        android:text="@string/lbl_notes" />
+
+      <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtNotes"
+        style="@style/edt_notes"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edt_notes_height"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:background="@color/common_google_signin_btn_text_light_disabled" />
+
+
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btnDone"
+      style="@style/btn_style"
+      android:layout_width="@dimen/medium_button_width"
+      android:layout_height="@dimen/medium_button_height"
+      android:layout_marginTop="@dimen/padding_medium"
+      android:background="@drawable/clickable_button_bg"
+      android:text="@string/btn_done"
+      app:layout_constraintEnd_toEndOf="@id/lin"
+      app:layout_constraintTop_toBottomOf="@id/lin" />
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

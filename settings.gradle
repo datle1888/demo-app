@@ -1,0 +1,2 @@
+include ':app', ':rxwebsocket'
+rootProject.name='dispatcher'

@@ -1,0 +1,100 @@
+<resources>
+    <string name="app_name">Dubai Police</string>
+    <string name="lbl_dashboard">Dashboard</string>
+    <string name="lbl_jobs">Jobs</string>
+    <string name="lbl_cameras">Cameras</string>
+    <string name="lbl_vehicle">Vehicle</string>
+    <string name="lbl_other_applications">Other applications</string>
+    <string name="lbl_facial_detection">Facial Detection</string>
+    <string name="lbl_plate_detection">Plate Detection</string>
+    <string name="lbl_pending_job">Waiting\nfor jobs</string>
+    <string name="lbl_pending_jobs">Pending jobs</string>
+    <string name="lbl_new_job">New Job\nRecieved</string>
+    <string name="lbl_complted_job">Completed Job</string>
+    <string name="lbl_driver_name">Driver Name</string>
+    <string name="driver_name">\?\?\?\?\?\nUnknown</string>
+    <string name="lbl_co_driver_name">Co-Driver Name</string>
+    <string name="co_driver_name">41613\nLouai Ibrahim M Mudallal</string>
+    <string name="lbl_cmd_announcement">Command Center Announcement</string>
+
+    <!-- Cmd announcements -->
+    <string name="lbl_smd_announce_1">Police Patrol must not leave it\'s designated area unless authorized to.</string>
+    <string name="lbl_smd_announce_2">Police Siren must not be turned on unless job is assigned to vehicle.</string>
+    <string name="lbl_smd_announce_3">Your driving behaviour is monitored.</string>
+
+
+    <string name="btn_report_incident">Report Incidents</string>
+    <string name="patrol_status">Patrol Status</string>
+    <string name="btn_application">Application</string>
+
+
+    <string name="available_via_radio">Available</string>
+    <string name="not_available">Off Duty</string>
+    <string name="on_the_way">On The Way</string>
+
+    <!--Shared element transition names -->
+    <string name="tr_top_highlighter" translatable="false">tr top highlighter</string>
+    <string name="lbl_hint_Job_ID">Job ID</string>
+    <string name="lbl_hint_Job_title">Job Title</string>
+    <string name="lbl_hint_Job_category">Category</string>
+    <string name="lbl_hint_Job_date_time"><![CDATA[Date & Time]]></string>
+    <string name="lbl_hint_Job_Remarks">Remarks</string>
+    <string name="lorum_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="btn_accept_job">Accept</string>
+    <string name="btn_delegate_job">Delegate</string>
+    <string name="btn_completed">Completed</string>
+    <string name="btn_arrived">Arrived</string>
+    <string name="lbl_hint_Job_distance">Distance</string>
+    <string name="lbl_hint_Job_eta">ETA</string>
+    <string name="btn_live_stream">Live Stream</string>
+    <string name="btn_plate_detection">Plate Detection</string>
+    <string name="btn_face_detection">Face Detection</string>
+    <string name="btn_weapon_detection">Weapon Detection</string>
+
+    <string name="txt_clock_format" translatable="false">HH\:mm a</string>
+    <string name="lbl_job_completed">Job Completed</string>
+    <string name="lbl_cancel">Cancel</string>
+    <string name="login">Touch here\nto login</string>
+    <string name="login_user_pwd">Login</string>
+    <string name="lbl_notes">Notes</string>
+    <string name="btn_done">Done</string>
+    <string name="lbl_select_type">Select Type</string>
+    <string name="lbl_select_reason">Select Reason</string>
+    <string name="lbl_delegate_job">Delegate Job</string>
+    <string name="lbl_report_incident">Report Incident</string>
+    <string name="title_activity_maps">Map</string>
+
+
+    <string name="smart_patrol">Smart\nPatrol</string>
+    <string name="smart_search">Smart\nSearch</string>
+    <string name="e_ticket">e-ticket\n</string>
+    <string name="criminal_pred">Criminal\nPrediction</string>
+    <string name="rasd">RASD\n</string>
+    <string name="heitel">HEITEL\n</string>
+
+
+    <string name="lbl_hint_camera_image">Camera image</string>
+    <string name="lbl_hint_vehicle_number">Vehicle Number</string>
+    <string name="lbl_hint_detected_by">Detected By</string>
+    <string name="lbl_hint_date">Date</string>
+    <string name="btn_dismiss">Dismiss</string>
+    <string name="lbl_hint_name">Name</string>
+    <string name="lbl_hint_area">Area</string>
+    <string name="btn_all">All</string>
+    <string name="btn_cam1">Cam 1</string>
+    <string name="btn_cam2">Cam 2</string>
+    <string name="btn_cam3">Cam 3</string>
+    <string name="btn_cam4">Cam 4</string>
+
+    <string name="lbl_loading_num_plate">Number plate detection in progress...</string>
+    <string name="lbl_loading_face">Face detection\nin progress...</string>
+
+    <string name="lbl_empty_num_plate">No number plates detected</string>
+    <string name="lbl_empty_face">No faces detected</string>
+    <string name="lbl_empty_weapon">No weapons detected</string>
+
+    <string name="btn_load_more">Load More</string>
+    <string name="lbl_hint_location">Location</string>
+    <string name="lbl_loading_weapon_data">Weapon data loading...</string>
+
+</resources>

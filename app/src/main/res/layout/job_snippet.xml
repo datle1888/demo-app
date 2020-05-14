@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <data>
+
+    <import type="android.view.View" />
+
+    <variable
+      name="dat"
+      type="com.jst.poc.dispatcher.models.BeanJobViewSet" />
+
+    <variable
+      name="job"
+      type="com.jst.poc.dispatcher.models.BeanJob" />
+
+  </data>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/containerAll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/constr"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/padding_medium"
+      android:background="@color/common_google_signin_btn_text_light_default"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+      <!--        android:background="@{dat.completed ? @drawable/ic_bg_jobs_completed : @drawable/ic_bg_jobs_pending}">-->
+
+      <!--JobId -->
+      <LinearLayout
+        android:id="@+id/linJobID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_medium_large"
+        android:layout_marginBottom="@dimen/padding_small"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/linJobTitle"
+        app:layout_constraintStart_toStartOf="@id/linJobTitle"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+          style="@style/hint_jobs"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/lbl_hint_Job_ID"
+          app:fontFamily="@font/montserrat_bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+          style="@style/title"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@{job.job_id_display}"
+          android:textColor="@{dat.completed ? @color/dim_white : @color/white}" />
+
+      </LinearLayout>
+
+      <!--Job Title -->
+      <LinearLayout
+        android:id="@+id/linJobTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_small"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/lincategory"
+        app:layout_constraintStart_toStartOf="@id/lincategory"
+        app:layout_constraintTop_toBottomOf="@id/linJobID">
+
+        <androidx.appcompat.widget.AppCompatTextView
+          style="@style/hint_jobs"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/lbl_hint_Job_title"
+          app:fontFamily="@font/montserrat_bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+          style="@style/title"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@{job.title}"
+          android:textColor="@{dat.completed ? @color/dim_white : @color/white}" />
+
+      </LinearLayout>
+
+      <!--Job Category -->
+      <LinearLayout
+        android:id="@+id/lincategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_for_job_snippet_lin"
+        android:layout_marginBottom="@dimen/padding_xtra_large"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linJobTitle">
+
+        <androidx.appcompat.widget.AppCompatTextView
+          style="@style/hint_jobs"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/lbl_hint_Job_category"
+          app:fontFamily="@font/montserrat_bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+          style="@style/title"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@{job.category}"
+          android:textColor="@{dat.completed ? @color/dim_white : @color/white}" />
+
+      </LinearLayout>
+
+      <!--Job Date and Time -->
+      <LinearLayout
+        android:id="@+id/linJobDateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_small"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/linJobID"
+        app:layout_constraintTop_toTopOf="@id/linJobID">
+
+        <androidx.appcompat.widget.AppCompatTextView
+          style="@style/hint_jobs"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/lbl_hint_Job_date_time"
+          app:fontFamily="@font/montserrat_bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+          style="@style/title"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@{job.job_time_display}"
+          android:textColor="@{dat.completed ? @color/dim_white : @color/white}" />
+
+      </LinearLayout>
+
+
+      <!--Job Remarks -->
+      <LinearLayout
+        android:id="@+id/linJobRemarks"
+        android:layout_width="@dimen/jobs_snippet_remark_width"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/padding_double_xtra_large"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@id/linJobDateTime"
+        app:layout_constraintTop_toTopOf="@id/linJobTitle">
+
+        <androidx.appcompat.widget.AppCompatTextView
+          style="@style/hint_jobs"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/lbl_hint_Job_Remarks"
+          app:fontFamily="@font/montserrat_bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+          style="@style/title"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:ellipsize="end"
+          android:maxLines="4"
+          android:text="@{job.comments}"
+          android:textColor="@{dat.completed ? @color/dim_white : @color/white}" />
+
+      </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- Buttons -->
+    <LinearLayout
+      android:id="@+id/linButtons"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/padding_semi"
+      android:orientation="horizontal"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/constr">
+
+
+      <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAcceptJob"
+        style="@style/btn_style"
+        android:layout_width="@dimen/long_button_width"
+        android:layout_height="@dimen/medium_button_height"
+        android:layout_marginEnd="@dimen/padding_small"
+        android:background="@drawable/btn_job_accept_bg"
+        android:drawablePadding="@dimen/padding_small"
+        android:gravity="center|start"
+        android:paddingStart="@dimen/padding_medium_large"
+        android:text="@string/btn_accept_job"
+        android:textColor="@color/text_unselected_green"
+        android:visibility="@{dat.completed ? View.GONE : View.VISIBLE}" />
+
+
+      <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDelegateJob"
+        style="@style/btn_style"
+        android:layout_width="@dimen/long_button_width"
+        android:layout_height="@dimen/medium_button_height"
+        android:background="@drawable/btn_job_delegate_bg"
+        android:gravity="center"
+        android:text="@string/btn_delegate_job"
+        android:textColor="@color/delegate_blue"
+        android:visibility="@{dat.completed ? View.GONE : View.VISIBLE}" />
+
+
+      <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCompleted"
+        style="@style/btn_style"
+        android:layout_width="@dimen/long_button_width"
+        android:layout_height="@dimen/long_button_height"
+        android:background="@drawable/clickable_button_bg"
+        android:text="@string/btn_completed"
+        android:textColor="@color/dim_white"
+        android:visibility="@{dat.completed ?  View.VISIBLE : View.GONE}" />
+
+
+    </LinearLayout>
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

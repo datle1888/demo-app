@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="splash_logo_width">272dp</dimen>
+    <dimen name="splash_logo_height">94dp</dimen>
+
+    <dimen name="dp_logo_dash_height">56dp</dimen>
+
+    <dimen name="top_text_unselected_line_height">18sp</dimen>
+    <dimen name="top_text_unselected_draw_padding">6dp</dimen>
+    <dimen name="top_text_start_end_padding">20dp</dimen>
+    <dimen name="bottom_panel_bottom_padding">20dp</dimen>
+    <dimen name="highlighter_height">14dp</dimen>
+    <dimen name="jobs_snippet_height">245dp</dimen>
+    <dimen name="jobs_snippet_remark_width">120dp</dimen>
+
+    <!--Common padding -->
+    <dimen name="padding_small">6dp</dimen>
+    <dimen name="padding_semi">8dp</dimen>
+    <dimen name="padding_medium">14dp</dimen>
+    <dimen name="padding_large">18dp</dimen>
+    <dimen name="padding_medium_large">28dp</dimen>
+    <dimen name="padding_xtra_large">32dp</dimen>
+    <dimen name="padding_double_xtra_large">70dp</dimen>
+    <dimen name="padding_for_job_snippet_lin">100dp</dimen>
+    <dimen name="padding_dash_centre_box">90dp</dimen>
+    <dimen name="padding_top_layer_top">20dp</dimen>
+    <dimen name="padding_top_layer_bottom">4dp</dimen>
+    <dimen name="padding_dash_logo_top">4dp</dimen>
+    <dimen name="padding_dash_bound_img_top">30dp</dimen>
+    <dimen name="padding_face_img">3dp</dimen>
+    <dimen name="padding_job_tom_bottom_container">34dp</dimen>
+
+
+    <!--Image sizes -->
+    <dimen name="bullet_img_size">5dp</dimen>
+    <dimen name="medium_image_size">56dp</dimen>
+    <dimen name="semi_image_size_width">34dp</dimen>
+    <dimen name="semi_image_size_height">33dp</dimen>
+    <dimen name="vehicle_top_left_img_width">170dp</dimen>
+    <dimen name="vehicle_top_left_img_height">70dp</dimen>
+    <dimen name="vehicle_top_right_img_width">112dp</dimen>
+    <dimen name="vehicle_top_right_img_height">81dp</dimen>
+
+    <dimen name="img_plate_width">140dp</dimen>
+    <dimen name="img_plate_height">40dp</dimen>
+    <dimen name="vehicle_metre_img_width">530dp</dimen>
+    <dimen name="vehicle_metre_img_height">252dp</dimen>
+    <dimen name="vehicle_car_img_width">516dp</dimen>
+    <dimen name="vehicle_car_img_height">283dp</dimen>
+    <dimen name="camera_tab_border_img_height">24dp</dimen>
+    <dimen name="dash_circle_width">120dp</dimen>
+    <dimen name="dash_circle_height">98dp</dimen>
+    <dimen name="face_img_weapon_height">70dp</dimen>
+
+    <!-- Text sizes -->
+    <dimen name="tz_caption">19sp</dimen>
+    <dimen name="tz_medium">16sp</dimen>
+    <dimen name="tz_normal">14sp</dimen>
+    <dimen name="tz_small">13sp</dimen>
+    <dimen name="tz_small_montezerat">12sp</dimen>
+    <dimen name="tz_large">18sp</dimen>
+    <dimen name="tz_xtra_large">34sp</dimen>
+    <dimen name="tz_jobs_hint2">12sp</dimen>
+    <dimen name="tz_jobs2_title">13sp</dimen>
+
+    <!-- Button sizes -->
+    <dimen name="report_inciden_height">40dp</dimen>
+    <dimen name="report_incident_width">160dp</dimen>
+    <dimen name="normal_button_height">21dp</dimen>
+    <dimen name="normal_button_width">85dp</dimen>
+    <dimen name="medium_button_width">100dp</dimen>
+    <dimen name="medium_button_height">38dp</dimen>
+    <dimen name="long_button_width">140dp</dimen>
+    <dimen name="long_button_height">40dp</dimen>
+    <dimen name="camera_tab_button_height">46dp</dimen>
+
+    <!-- EditText Box Size -->
+    <dimen name="edt_notes_height">180dp</dimen>
+    <dimen name="bottom_sheet_min_height">600dp</dimen>
+    <dimen name="face_img_item_height">230dp</dimen>
+
+</resources>
